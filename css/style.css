@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    cursor: pointer;
+    margin: 30px 0;
+    color: blue;
+}
+
+.menu-icon {
+    font-size: large;
+    cursor: pointer;
+    display: none;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    color: #ff5ea2
+}
+
+#menubar {
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.col-1 {
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 50px;
+}
+
+.col-1 h2 {
+    font-size: 54px;
+
+}
+
+.col-1 h3 {
+    font-size: 30px;
+    color: #707070;
+    font-weight: 100;
+    margin: 20px 0 10px 0;
+}
+
+.col-1 p {
+    font-size: 16px;
+    color: #b7b7b7;
+    font-weight: 100;
+
+}
+
+.col-1 h4 {
+    font-size: 20px;
+
+    margin: 30px 0;
+
+}
+
+.col-1 button {
+    width: 140px;
+    border: 0;
+    padding: 10px 12px;
+    outline: none;
+    color: white;
+    background: linear-gradient(to right, #fb5283, #ff3527);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+
+
+
+.col-1 button:hover {
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.col-1::after {
+    content: "";
+    width: 10px;
+    height: 57%;
+    background: linear-gradient(#ff469f, #ff6062);
+    position: absolute;
+    left: -40px;
+    top: 8px;
+}
+
+.col-2 {
+    position: relative;
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.col-2 .controller {
+    position: relative;
+    width: 90%;
+    right: 100px;
+    animation: controller 2s ease-out 1;
+    z-index: 1;
+}
+
+@keyframes controller {
+    from {
+        position: relative;
+        right: -350px;
+    }
+
+    to {
+        position: relative;
+        right: 100px;
+    }
+}
+
+.col-2 .color-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(#ff54a2, #ff575a);
+    border-radius: 20px 0 0 20px;
+    height: 100%;
+    width: 80%;
+    z-index: -1;
+    transform: translateX(150px);
+}
+
+.add-btn {
+    position: relative;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    left: 90%;
+    display: block;
+
+    animation: cart 2s ease-out 1;
+}
+
+
+.add-btn img {
+    width: 35px;
+    margin-bottom: 5px;
+    filter: invert(100%);
+    transition: 0.05s;
+}
+
+.add-btn:hover img {
+    width: 45px;
+}
+
+@keyframes cart {
+    from {}
+
+    to {}
+}
+
+.social-links {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    /* background-color:pink; */
+}
+
+#fb {
+    padding: 10px;
+    font-size: 30px;
+    color: rgb(0, 125, 197);
+}
+
+#twit {
+    padding: 10px;
+    font-size: 40px;
+    color: rgb(0, 125, 197);
+}
+
+#insta {
+    padding: 10px;
+    font-size: 40px;
+    color: rgb(224, 87, 87);
+}
+
+@media only screen and (max-width:800px) {
+    nav ul {
+        width: 100%;
+        background: linear-gradient(#ff469f, #ff6062);
+        position: absolute;
+        top: 75px;
+        right: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        z-index: 2;
+
+
+    }
+
+    nav ul li {
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+    }
+
+    nav ul li a {
+        position:relative;
+        color: white;
+        font-size: larger;
+
+    }
+    
+
+    #menubar{
+        visibility: hidden;
+        height:500px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .row {
+        flex-direction: column-reverse;
+        margin: 0px;
+    }
+
+    .col-2 {
+        flex-basis: 100%;
+
+        margin-bottom: 50px;
+
+    }
+
+    .col-2 .controller {
+        width: 77%;
+    }
+
+    .col-2 .color-box {
+        transform: translateX(40px);
+    }
+
+    .col-1 {
+        flex-basis: 100%;
+        margin-top:-10px;
+    }
+
+    .col-1 h2 {
+        font-size: 35px;
+
+    }
+
+    .col-1 h3 {
+        font-size: 15px;
+
+    }
+
+    .col-1 p {
+        font-size: 15px;
+        margin-bottom:-10px;
+    }
+
+    .add-btn {
+        position: relative;
+        text-align: center;
+        color: white;
+        cursor: pointer;
+        left: 70%;
+        display: block;
+
+        animation: cart 2s ease-out 1;
+    }
+
+    .add-btn p {
+        font-size: 14px;
+        text-shadow: 2px 1px 2px grey;
+    }
+
+    .social-links {
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    #fb {
+        padding: 10px;
+        font-size: 20px;
+        color: rgb(0, 125, 197);
+    }
+
+    #twit {
+        padding: 10px;
+        font-size: 30px;
+        color: rgb(0, 125, 197);
+    }
+
+    #insta {
+        padding: 10px;
+        font-size: 30px;
+        color: rgb(224, 87, 87);
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .col-2 .controller {
+        position: relative;
+        width: 77%;
+        right: 80px;
+    }
+    @keyframes controller {
+        from {
+            position: relative;
+            right: -350px;
+        }
+    
+        to {
+            position: relative;
+            right: 80px;
+        }
+    }
+}
